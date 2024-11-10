@@ -1,0 +1,115 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding-top: 10px;
+    padding-inline: 10px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1c0b2d; /* Roxo bem escuro */
+    color: #b2a0c9; /* Cor clara para o texto */
+    line-height: 1.6;
+}
+
+/* Container geral para centralizar */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px;
+    background-color: #2f0947; /* Roxo mais escuro para contraste */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Título */
+h1 {
+    font-size: 2.5rem;
+    color: #b2a0c9;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo dos labels */
+label {
+    font-size: 1.1rem;
+    color: #b2a0c9;
+    margin-bottom: 8px;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilo dos inputs */
+input[type="text"], input[type="number"], select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #3a1355;
+    border: 2px solid rgba(85, 43, 128, 1);
+    border-radius: 5px;
+    color: #b2a0c9;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+    border-color: rgba(85, 43, 128, 1);
+    outline: none;
+}
+
+/* Estilo do botão Salvar */
+button[type="submit"] {
+    padding: 12px 28px;
+    background-color: rgba(85, 43, 128, 1);
+    color: #b2a0c9;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #240836;
+}
+
+/* Estilo do botão Cancelar */
+a.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #b2a0c9;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+a.btn:hover {
+    background-color: #240836;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="text"], input[type="number"], select, textarea {
+        font-size: 1rem;
+    }
+}
