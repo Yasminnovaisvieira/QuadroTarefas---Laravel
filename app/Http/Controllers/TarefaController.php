@@ -49,7 +49,6 @@ class TarefaController extends Controller
         return redirect()->route('tarefas.index')->with('success', 'Tarefa criada com sucesso!');
     }
 
-
     public function show($id)
     {
         $tarefa = Tarefa::findOrFail($id);
@@ -64,6 +63,7 @@ class TarefaController extends Controller
 
     public function update(Request $request, $id)
     {
+
         $validated = $request->validate([
             'titulo' => 'required|max:255',
             'descricao' => 'required|max:255',
@@ -81,7 +81,6 @@ class TarefaController extends Controller
 
         return redirect()->route('tarefas.index')->with('success', 'Tarefa atualizada com sucesso!');
     }
-
 
     public function destroy($id)
     {

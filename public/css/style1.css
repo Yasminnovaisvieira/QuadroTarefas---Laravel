@@ -25,7 +25,6 @@ body {
     border-radius: 20px;
     border: 5px solid #2f0947; /* Borda suave e roxa */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra suave */
-    
 }
 
 /* Cabeçalho */
@@ -47,7 +46,6 @@ h1 {
     margin: 0 auto 20px; /* Centraliza a imagem e dá margem embaixo */
     display: block; /* Para que a imagem se comporte como um bloco */
 }
-
 
 /* Detalhes do livro */
 p {
@@ -84,10 +82,22 @@ p {
     text-align: center;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: #240836; /* Roxo mais escuro ao passar o mouse */
 }
 
+/* Grupo de Botões */
+.button-group {
+    display: flex;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 20px; /* Espaçamento entre os botões */
+    margin-top: 20px;
+}
+
+/* Alinhamento de Texto Justificado (Sinopse) */
+.justificado {
+    text-align: justify;
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -122,15 +132,3 @@ p {
         max-width: 100px; /* Imagem ainda menor em dispositivos muito pequenos */
     }
 }
-
-.button-group {
-    display: flex;
-    justify-content: center; /* Centraliza os botões horizontalmente */
-    gap: 20px; /* Espaçamento entre os botões */
-    margin-top: 20px;
-}
-
-.justificado {
-    text-align: justify;
-}
-

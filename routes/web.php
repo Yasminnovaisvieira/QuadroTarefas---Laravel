@@ -1,15 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BookController;
+use App\Http\Controllers\TarefaController;
 
-Route::get('/', [BookController::class, 'index'])->name('books.index');
-Route::get('/books/create', [BookController::class, 'create'])->name('books.create'); // Rota de criação
-Route::post('/books', [BookController::class, 'store'])->name('books.store');
-Route::get('/books/{id}', [BookController::class, 'show'])->name('books.show');
-Route::get('/books/{book}/edit', [BookController::class, 'edit'])->name('books.edit');
-Route::put('/books/{book}', [BookController::class, 'update'])->name('books.update');
-Route::delete('/books/{id}', [BookController::class, 'destroy'])->name('books.destroy');
-Route::resource('books', BookController::class);
-Route::get('/books', [BookController::class, 'index'])->name('books.index');
-Route::get('/books/search', [BookController::class, 'search'])->name('books.search');
+Route::get('/', [TarefaController::class, 'index'])->name('tarefas.index');
+
+Route::get('/tarefas/create', [TarefaController::class, 'create'])->name('tarefas.create');
+
+Route::post('/tarefas', [TarefaController::class, 'store'])->name('tarefas.store');
+
+Route::get('/tarefas/{id}', [TarefaController::class, 'show'])->name('tarefas.show');
+
+Route::get('/tarefas/{tarefa}/edit', [TarefaController::class, 'edit'])->name('tarefas.edit');
+
+Route::put('/tarefas/{tarefa}', [TarefaController::class, 'update'])->name('tarefas.update');
+
+Route::delete('/tarefas/{id}', [TarefaController::class, 'destroy'])->name('tarefas.destroy');
+
+Route::get('/tarefas/search', [TarefaController::class, 'search'])->name('tarefas.search');
+
+Route::resource('tarefas', TarefaController::class)->except(['create', 'store']);

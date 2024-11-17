@@ -19,11 +19,11 @@ body {
 .container {
     width: 90%;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 800px; /* Limita a largura máxima do formulário */
     padding: 30px;
     background-color: #2f0947; /* Roxo mais escuro para contraste */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar destaque */
 }
 
 /* Título */
@@ -45,10 +45,10 @@ label {
 
 /* Estilo dos inputs */
 input[type="text"], input[type="number"], select, textarea {
-    width: 100%;
+    width: 100%; /* Garante que os inputs ocupem toda a largura do formulário */
     padding: 12px;
     margin: 10px 0;
-    background-color: #3a1355;
+    background-color: #3a1355; /* Cor de fundo dos inputs */
     border: 2px solid rgba(85, 43, 128, 1);
     border-radius: 5px;
     color: #b2a0c9;
@@ -56,9 +56,10 @@ input[type="text"], input[type="number"], select, textarea {
     transition: border-color 0.3s ease;
 }
 
+/* Efeito de foco nos campos de input */
 input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
     border-color: rgba(85, 43, 128, 1);
-    outline: none;
+    outline: none; /* Remove o outline padrão */
 }
 
 /* Estilo do botão Salvar */
@@ -72,10 +73,11 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
     border: none;
     display: block;
-    width: 100%;
+    width: 100%; /* Garante que o botão ocupe toda a largura */
     margin-top: 20px;
 }
 
+/* Efeito de hover no botão Salvar */
 button[type="submit"]:hover {
     background-color: #240836;
 }
@@ -92,9 +94,10 @@ a.btn {
     text-align: center;
     margin-top: 20px;
     transition: background-color 0.3s ease;
-    width: 100%;
+    width: 100%; /* Garante que o botão ocupe toda a largura */
 }
 
+/* Efeito de hover no botão Cancelar */
 a.btn:hover {
     background-color: #240836;
 }
@@ -106,10 +109,30 @@ a.btn:hover {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Tamanho de fonte menor em telas menores */
     }
 
     input[type="text"], input[type="number"], select, textarea {
-        font-size: 1rem;
+        font-size: 1rem; /* Ajusta o tamanho da fonte para dispositivos menores */
+    }
+
+    button[type="submit"] {
+        font-size: 1rem; /* Ajusta o tamanho do botão em telas pequenas */
+        padding: 10px 20px; /* Ajusta o padding do botão em telas pequenas */
+    }
+
+    a.btn {
+        font-size: 1rem; /* Ajusta o tamanho do botão cancelar */
+        padding: 10px 20px; /* Ajusta o padding do botão cancelar */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Faz o container ocupar toda a largura em dispositivos muito pequenos */
+    }
+
+    button[type="submit"], a.btn {
+        padding: 10px 20px; /* Ajuste do botão para telas muito pequenas */
     }
 }
